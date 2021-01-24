@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  color: hsl(0, 0%, 81%);
+  font-weight: 500;
+  line-height: 1.5;
+  display: block;
+}
+
+.grid-container {
+  margin: 7rem auto 0;
+  max-width: 70%;
+  display: grid;
+  grid-template:
+    "post-1 post-1 post-1 post-2 post-3"
+    "post-4 post-5 post-5 post-5 post-3"
+  ;
+  grid-gap: 25px;
+}
+
+h3,
+.recommend {
+  font-weight: 600;
+}
+
+.grid-item {
+  padding: 1.75rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  max-width: auto;
+}
+
+/* POST */
+.head-post {
+  display: flex;
+}
+
+.post-1 {
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right 80px top;
+  background-color: hsl(263, 55%, 52%);
+  grid-area: post-1;
+}
+
+.post-2 {
+  background-color: hsl(217, 19%, 35%);
+  line-height: 1.75;
+  grid-area: post-2;
+}
+
+.post-3 {
+  background-color: hsl(0, 0%, 100%);
+  line-height: 1.75;
+  grid-area: post-3;
+}
+
+.post-4 {
+  background-color: hsl(0, 0%, 100%);
+  line-height: 1.75;
+  grid-area: post-4;
+}
+
+.post-5 {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: post-5;
+}
+
+/* Text color */
+.white-back {
+  color: hsl(0, 0%, 55%);
+}
+
+.white-back h3 {
+  color: hsl(0, 0%, 30%);
+}
+
+.white-back .recommend {
+  color: hsl(0, 0%, 30%);
+}
+
+/* Images */
+img {
+  border-radius: 50%;
+}
+
+.img-patrick,
+.img-daniel {
+  border: 2px solid hsl(263, 55%, 70%);
+}
+
+/* Text */
+.overview {
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.recommend {
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 15px auto;
+}
+.verified {
+  font-size: 13px;
+}
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+/* Respons */
+@media only screen and (max-width: 1600px) {
+  .grid-container {
+    max-width: 90%;
+    margin: 7rem 4rem .5rem;
+  }
+}
+@media only screen and (max-width: 1260px) {
+  .grid-container {
+    max-width: 100%;
+    margin: 5.5rem 2rem auto;
+  }
+}
+@media only screen and (max-width: 1172px) {
+  .grid-container {
+    grid-template:
+      "post-1"
+      "post-2"
+      "post-4"
+      "post-5"
+      "post-3";
+  }
+}
